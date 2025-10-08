@@ -15,6 +15,10 @@
             margin: 0;
         }
 
+        html, body {
+            overflow-x: hidden;
+        }
+
         .topbar {
             border-top: 1px solid #efe6d6;
             border-bottom: 1px solid #efe6d6;
@@ -22,22 +26,22 @@
         }
 
         .wrap {
-            margin: 0 auto;
-            padding: 16px 20px;
+
+            padding: 20px 20px;
             display: flex;
             align-items: center;
             gap: 20px;
         }
 
         .logo {
-            height: 38px;
+            height: 48px;
             width: auto;
         }
 
         nav {
             flex: 1;
             display: flex;
-            justify-content: center;
+            margin-left: 390px;
         }
 
         nav a {
@@ -55,17 +59,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 50px;
         }
 
         .meta {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 17px;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         .meta .title {
-            font-weight: 700;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
 
         .meta .date {
@@ -81,25 +88,20 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
         .content {
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
-            height: 700px;
+            height: auto;;
         }
+
 
         .left {
             width: 50%;
-            padding: 80px;
             box-sizing: border-box;
         }
 
-        .right-part {
-            width: 40%;
-            background: #f6a62d;
-            border-radius: 60px;
-            display: flex;
-            margin-top: 150px
-        }
 
         .main-text h1 {
             font-size: 180px;
@@ -107,13 +109,358 @@
             margin: 0;
             font-weight: 900;
             text-transform: lowercase;
+            padding-left: 25px;
         }
 
         .text {
             font-size: 20px;
-            line-height: 1.4;
+            line-height: 1.1;
             max-width: 500px;
             margin-top: 20px;
+        }
+
+        .main-text h1 {
+            font-size: 250px;
+            letter-spacing: -20px;
+            font-weight: max(800);
+            padding-top: 80px;
+            font-family: Sans-serif;
+        }
+
+        .main-text h1 span {
+            margin-left: 100px;
+        }
+
+        .text {
+            font-size: 25px;
+            font-weight: 500;
+            padding-left: 370px;
+            padding-top: 50px;
+            letter-spacing: -0.5px;
+
+        }
+
+        .that {
+            padding-left: 80px;
+        }
+
+        .border-text::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #efe6d6;
+            width: 537px;
+            margin-left: 263px;
+            position: absolute;
+            margin-top: 60px;
+
+        }
+
+        .container {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 47px;
+            cursor: pointer;
+        }
+
+        .circle + .circle {
+            margin-left: -10px;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            margin-left: -10px;
+            font-size: 25px;
+            position: relative;
+            z-index: 0;
+            flex: 0 0 auto;
+            transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+            will-change: transform;
+        }
+
+        .circle:hover {
+            transform: scale(1.25);
+            z-index: 10;
+            background: orange;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 90px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+
+        .stat {
+            width: auto;
+            flex: 0 0 auto;
+            text-align: center;
+
+        }
+
+        .num {
+            position: relative;
+            font-style: italic;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .desc {
+            font-size: 21px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-top: 0;
+            margin-left: -120px;
+        }
+
+        .desc .line1 {
+            margin-left: 200px;
+        }
+
+        .desc .line2 {
+            display: block;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        @media (max-width: 960px) {
+            .desc .line1, .desc .line2 {
+                white-space: normal;
+            }
+        }
+
+        .date {
+            margin-right: 110px;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+
+        }
+
+        #design-section{
+            background:#000;
+            flex-basis:100%;
+            margin-top:40px;
+            padding:300px 50px 90px;
+            overflow:visible;
+            position:relative;
+        }
+
+        .about-wrap{ z-index: 3; }
+
+        #design-stage{
+            position:relative;
+            max-width:1200px;
+            margin:0 auto;
+            padding:0 24px;
+            min-height:70vh;
+            display:flex;
+            justify-content:center;
+        }
+
+        .about-wrap{
+            position:absolute;
+            left:50%;
+            top:0;
+            transform:translateX(-50%);
+            width:100vw;
+            z-index:3;
+            pointer-events:none;
+        }
+
+        .about {
+            margin: 0;
+            white-space: nowrap;
+            font-size: clamp(72px, 9vw, 170px);
+            line-height: .9;
+            letter-spacing: .5px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -40%);
+        }
+
+        .about--top {
+            color: #111;
+            clip-path: inset(0 0 50% 0);
+        }
+
+        .about--bottom {
+            color: #faf7f4;
+            clip-path: inset(50% 0 0 0);
+        }
+
+
+        .main-hero{
+            position:absolute;
+            left:50%;
+            bottom: -90px;
+            transform:translateX(-50%);
+            width:1050px;
+            height:auto;
+            z-index:1;
+        }
+
+
+        .decoration {
+            position: absolute;
+            z-index: 2;
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        }
+
+        .target {
+            width: clamp(40px, 6vw, 70px);
+        }
+
+        .cross {
+            width: clamp(40px, 6vw, 70px);
+        }
+
+        .target.tl {
+            top: 14px;
+            left: 14px;
+        }
+
+        .target.tl {
+            top: -70px;
+            left: -200px;
+            width: 110px;
+        }
+
+        .target.tr {
+            top: -70px;
+            right: -200px;
+            width: 110px;
+        }
+
+        .target.bl {
+            bottom: -70px;
+            left: -200px;
+            width: 110px;
+
+        }
+
+        .target.br {
+            bottom: -70px;
+            right: -200px;
+            width: 110px;
+        }
+
+        .cross.left {
+            top: 50%;
+            left: -200px;
+            width: 110px;
+            transform: translateY(-50%);
+        }
+
+        .cross.right {
+            top: 50%;
+            right: -200px;
+            width: 110px;
+            transform: translateY(-50%);
+        }
+
+        .cross.bl {
+            bottom: 14px;
+            left: 14px;
+        }
+
+        .cross.br {
+            bottom: 14px;
+            right: 14px;
+        }
+
+        #design-section h3 {
+            color: #faf7f4;
+            font-size: clamp(72px, 9vw, 170px);
+            line-height: .9;
+            margin: 0 0 32px;
+        }
+
+        #design-section h3 span {
+            font-size: 220px;
+            padding: 0 30px 0 20px;
+        }
+
+        #design-section h3 span {
+            font-size: clamp(100px, 12vw, 220px);
+            padding: 0 30px 0 20px;
+        }
+
+
+        .side-signs img {
+            width: clamp(64px, 8vw, 110px);
+            height: auto;
+        }
+
+        :root {
+            --about-min: 92px;
+            --about-max: 220px;
+            --about-shift: 54%;
+            --about-letter: -0.02em;
+            --about-pad: 24px;
+            --dot-scale: .82;
+        }
+
+        #design-section {
+            overflow: hidden;
+        }
+
+        .about-wrap {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            pointer-events: none;
+        }
+
+        .about-line {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, calc(-1 * var(--about-shift)));
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 100vw;
+            padding: 0 var(--about-pad);
+            margin: 0;
+            font-weight: 800;
+            font-size: clamp(var(--about-min), 10vw, var(--about-max));
+            line-height: .86;
+            letter-spacing: var(--about-letter);
+            white-space: nowrap;
+        }
+
+        .about--bottom {
+            color: #faf7f4;
+            clip-path: inset(50% 0 0 0);
+        }
+
+        .about-line .word {
+            display: inline-block;
+        }
+
+        .about-line .dot {
+            display: inline-block;
+            font-weight: 900;
+            font-size: calc(1em * var(--dot-scale));
+            line-height: 1;
+            transform: translateY(-2%);
         }
     </style>
 </head>
@@ -143,14 +490,78 @@
 <section class="content">
     <div class="left">
         <div class="main-text">
-            <h1>visual<br>poetry</h1>
+            <h1><span>visual</span><br>poetry</h1>
         </div>
-        <div class="text">
-            Welcome to a visual journey that transcends time and space. Discover the artistry of moments captured in motion.
+        <div class="border-text">
+            <div class="text">
+                <span class="that">Welcome to a visual journey that </span>transcends time and space. Discover the
+                artistry of moments captured in
+                motion.
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="circle">yt</div>
+            <div class="circle">ig</div>
+            <div class="circle">fb</div>
+            <div class="circle">x</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="value"><span class="plus">+</span><span class="num">250k</span></div>
+                <p class="desc">
+                    <span class="line1"><span class="date">Videos that reaching a wide</span></span>
+                    <span class="line2">audience and give lasting impression</span>
+                </p>
+            </div>
+
+            <div class="stat">
+                <div class="value"><span class="plus">+</span><span class="num">800k</span></div>
+                <p class="desc">
+                    <span class="line1"><span class="date">Hours watched, engaging</span></span>
+                    <span class="line2">storytelling that captivates viewers</span>
+                </p>
+            </div>
         </div>
     </div>
-    <div class="right-part">
-    </div>
+    <section id="design-section">
+        <div class="about-wrap">
+            <div class="about-line about--top">
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+            </div>
+
+            <div class="about-line about--bottom">
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+                <span class="word">about</span>
+                <span class="dot">.</span>
+            </div>
+        </div>
+
+
+        <div id="design-stage">
+            <img class="decoration target tl" src="design-circle.png" alt="">
+            <img class="decoration target tr" src="design-circle.png" alt="">
+            <img class="decoration target bl" src="design-circle.png" alt="">
+            <img class="decoration target br" src="design-circle.png" alt="">
+            <img class="decoration cross left" src="design-cross.png" alt="">
+            <img class="decoration cross right" src="design-cross.png" alt="">
+            <div id="design-images-container">
+                <img class="main-hero" src="design-main.png" alt="">
+            </div>
+        </div>
+    </section>
+
 </section>
 </body>
 </html>
